@@ -1,0 +1,23 @@
+ALGORITHM checkpoint
+VAR
+    c : CHAR;
+    s : STRING :="";
+    l : INTEGER :=0;
+    nw : INTEGER :=0;
+    nv : INTEGER :=0;
+BEGIN
+    WHILE (c <> ".") DO
+        s := s + c;
+        IF (c := "a", c := "e", c := "i", c := "o", c := "u") THEN
+            nv++;
+        END_IF
+            IF (c := " ") THEN
+            nw++;
+        END_IF        
+    END_WHILE
+    l:= s.length();
+    Write(s);
+    Write("The length of the sentence is:",l);
+    Write("The number of words in the sentence is:",nw);
+    Write("The number of vowels in the sentence is:",nv);
+END
